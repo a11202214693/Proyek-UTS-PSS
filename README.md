@@ -22,7 +22,7 @@
 # Items
 ### ENDPOINT
 http://localhost:8000/api/suppliers
-### POST JSON PAYLOAD
+### POST JSON PAYLOAD EXAMPLE
 {
   "name": "Headphone Bluetooth",
   "description": "Headphone nirkabel bass boost",
@@ -37,7 +37,7 @@ http://localhost:8000/api/suppliers
 # Categories
 ### ENDPOINT
 http://localhost:8000/api/categories
-### JSON PAYLOAD
+### JSON PAYLOAD EXAMPLE
 {
   "name": "PHONE",
   "description": "This is a new phone.",
