@@ -48,7 +48,7 @@ http://localhost:8000/api/categories
 # Suppliers
 ### ENDPOINT
 http://localhost:8000/api/suppliers
-### POST PAYLOAD
+### POST PAYLOAD EXAMPLE
 {
   "name": "New Supplier",
   "contact_info": "123-456-7890",
