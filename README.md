@@ -9,14 +9,14 @@
 
 # Step by step mengerjakan project ini
 
-install Laravel 11
-setup database
-create migration
-create model for the table
-create seeder
-create api controller
-create api endpoint
-setup docker-compose.yml dan dockerfile dengan image MySQL 8.0
+- install Laravel 11
+- setup database
+- create migration
+- create model for the table
+- create seeder
+- create api controller
+- create api endpoint
+- setup docker-compose.yml dan dockerfile dengan image MySQL 8.0
 
 
 # Items
@@ -72,14 +72,14 @@ http://localhost:8000/api/low-stock/20
 - php artisan key:generate
 - setup env ganti driver dengan MySQL dan nama database dengan nama yang diiginkan
 - Contoh : 
-DB_CONNECTION=mysql
+(DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=uts-pss
 DB_USERNAME=root
 DB_PASSWORD=
 DB_CHARSET=utf8mb4
-DB_COLLATION=utf8mb4_unicode_ci
+DB_COLLATION=utf8mb4_unicode_ci)
 - buat database dengan nama yang sama seperti di env
 - php artisan migrate
 - php artisan db:seed
