@@ -1,0 +1,35 @@
+services:
+  # Backend application container
+  app:
+    build:
+      context: .  # Set context to the current directory
+    container_name: backend-app
+    ports:
+      - "8000:80"  
+    volumes:
+      - ./:/var/www/html  
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=uts-pss
+      - DB_USERNAME=root
+      - DB_PASSWORD=  # Empty password
+    depends_on:
+      - db  # Ensure the MySQL container is started before the backend
+
+  # MySQL container
+  db:
+    image: mysql:8.0  # Using MySQL version 8.0
+    container_name: mysql-db
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"  # Allow empty password for root
+      MYSQL_DATABASE: uts-pss
+    ports:
+      - "3306:3306"  # Expose port 3306 for MySQL
+    volumes:
+      - mysql_data:/var/lib/mysql  # Persist MySQL data
+
+# Volumes to persist MySQL data
+volumes:
+  mysql_data:
